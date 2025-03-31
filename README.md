@@ -1,46 +1,43 @@
 # Voces_perdidas
-Aplicación web basada en Flask diseñada para crear conciencia sobre las personas desaparecidas, presentando historias anonimizadas de sus desapariciones. La aplicación procesa datos de un archivo CSV que contiene detalles sobre las personas que no encontramos aun.
-=======
-# Aplicación Web de Desapariciones
 
-Este proyecto es una aplicación web diseñada para mostrar narrativas de casos de desapariciones. Las narrativas se generan utilizando un modelo de IA basado en descripciones reales proporcionadas en un archivo de texto. La aplicación tiene como objetivo crear conciencia sobre las personas desaparecidas al presentar sus historias de manera impactante.
+Aplicación web basada en Flask diseñada para crear conciencia sobre las personas desaparecidas, presentando historias anonimizadas de sus desapariciones. La aplicación procesa datos de un archivo CSV que contiene detalles sobre las personas desaparecidas y utiliza un modelo de IA para generar narrativas basadas en descripciones reales. El objetivo es sensibilizar al público al mostrar estas historias de manera impactante.
 
 ## Estructura del Proyecto
 
 El proyecto consta de los siguientes archivos y directorios:
 
-- **public/index.html**: El documento HTML principal que contiene la estructura de la página web.
-- **src/app.js**: El archivo JavaScript que maneja la lógica para leer el archivo de texto, generar narrativas utilizando DeepAI y actualizar dinámicamente el contenido de la página web.
-- **src/styles.css**: El archivo CSS que estiliza la página web, estableciendo un fondo negro, texto blanco y centrando el contenido.
-- **data/cedulassampledes.txt**: Un archivo de texto que contiene descripciones originales de casos de desapariciones utilizadas como referencia para generar narrativas.
-- **package.json**: El archivo de configuración para npm, que lista las dependencias necesarias para el proyecto.
+- **templates/index.html**: El documento HTML principal que contiene la estructura de la página web.
+- **static/**: Directorio que contiene los recursos estáticos como imágenes, íconos y estilos CSS.
+- **app.py**: Archivo principal de Flask que maneja las rutas y la lógica del servidor.
+- **process_cases.py**: Script que procesa los datos del archivo CSV con la bse de datos completa y genera narrativas anonimizadas.
+- **data/processed_cases.csv**: Archivo CSV que contiene los datos originales de los casos de desapariciones.
 
 ## Instrucciones de Configuración
 
 1. **Clonar el Repositorio**: 
    ```bash
-   git clone <repository-url>
-   cd desapariciones-web
+   git clone https://github.com/neuterlee/Voces_perdidas.git
+   cd Voces_perdidas
    ```
 
 2. **Instalar Dependencias**: 
-   Asegúrate de tener Node.js instalado. Luego ejecuta:
+   Asegúrate de tener Python instalado. Luego ejecuta:
    ```bash
-   npm install
+   pip install -r requirements.txt
    ```
 
 3. **Ejecutar la Aplicación**: 
-   Inicia un servidor local para servir la aplicación. Puedes usar un paquete como `http-server` u otro servidor de tu elección:
+   Inicia el servidor Flask ejecutando el archivo `app.py`:
    ```bash
-   npx http-server public
+   python app.py
    ```
 
 4. **Acceder a la Aplicación**: 
-   Abre tu navegador web y navega a `http://localhost:8080` (o el puerto especificado por tu servidor) para ver la aplicación.
+   Abre tu navegador web y navega a `http://localhost:5000` para ver la aplicación.
 
 ## Uso
 
-Al cargar la aplicación, se mostrará una descripción narrativa de un caso de desaparición en el centro de la página. El texto se generará dinámicamente utilizando las descripciones proporcionadas en el archivo `cedulassampledes.txt`, asegurando que los nombres y ubicaciones sean anonimizados para proteger la privacidad.
+Al cargar la aplicación, se mostrará una descripción narrativa de un caso de desaparición en el centro de la página. El texto se generará dinámicamente utilizando las descripciones proporcionadas en el archivo `casos.csv`, asegurando que los nombres y ubicaciones sean anonimizados para proteger la privacidad.
 
 ## Contribuciones
 
