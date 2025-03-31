@@ -1,0 +1,25 @@
+{
+  "name": "disappearance-web",
+  "version": "1.0.0",
+  "description": "A web application that displays dynamically generated narratives of disappearance cases.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "keywords": [
+    "disappearance",
+    "narrative",
+    "web",
+    "AI"
+  ],
+  "author": "Your Name",
+  "license": "ISC"
+}
