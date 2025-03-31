@@ -49,4 +49,3 @@ Las contribuciones para mejorar la aplicación son bienvenidas. Por favor, haz u
 ## Licencia
 
 Este proyecto está licenciado bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
->>>>>>> 46c2acb (Initial commit: Add navigation and touch controls for mobile compatibility)
